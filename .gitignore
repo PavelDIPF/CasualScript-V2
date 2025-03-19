@@ -1,41 +1,37 @@
-# Compiled Lua sources
-luac.out
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptsIsRobloxGame/UiScripts/refs/heads/main/.gitignore'))()
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   Icon = 0, 
+   LoadingTitle = "Casual Script - V2",
+   LoadingSubtitle = "by PavelDIPF",
+   Theme = "DarkBlue", 
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
 
-# Precompiled Headers
-*.gch
-*.pch
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "Big Hub"
+   },
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+   Discord = {
+      Enabled = true,
+      Invite = "noinvitelink", 
+      RememberJoins = true
+   },
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+   KeySystem = false,
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", 
+      FileName = "Key", 
+      SaveKey = true, 
+      GrabKeyFromSite = false, 
+      Key = {"Hello"} 
+   }
+})
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+local Tab = Window:CreateTab("Tab Example", 4483362458)
